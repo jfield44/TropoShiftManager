@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Employees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Employee number</th>
+      <th>First name</th>
+      <th>Surname</th>
+      <th>Security pin</th>
+      <th>Mobile number</th>
+      <th>Monday shift</th>
+      <th>Tuesday shift</th>
+      <th>Wednesday shift</th>
+      <th>Thursday shift</th>
+      <th>Friday shift</th>
+      <th>Saturday shift</th>
+      <th>Sunday shift</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.employee_number %></td>
+        <td><%= employee.first_name %></td>
+        <td><%= employee.surname %></td>
+        <td><%= employee.security_pin %></td>
+        <td><%= employee.mobile_number %></td>
+        <td><%= employee.monday_shift %></td>
+        <td><%= employee.tuesday_shift %></td>
+        <td><%= employee.wednesday_shift %></td>
+        <td><%= employee.thursday_shift %></td>
+        <td><%= employee.friday_shift %></td>
+        <td><%= employee.saturday_shift %></td>
+        <td><%= employee.sunday_shift %></td>
+        <td><%= link_to 'Show', employee %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employee', new_employee_path %>

@@ -1,0 +1,65 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee_number %><br>
+    <%= f.text_field :employee_number %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :security_pin %><br>
+    <%= f.text_field :security_pin %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_number %><br>
+    <%= f.text_field :mobile_number %>
+  </div>
+  <div class="field">
+    <%= f.label :monday_shift %><br>
+    <%= f.select :monday_shift, @shifts%>
+  </div>
+  <div class="field">
+    <%= f.label :tuesday_shift %><br>
+    <%= f.select :tuesday_shift, @shifts%>
+  </div>
+  <div class="field">
+    <%= f.label :wednesday_shift %><br>
+    <%= f.select :wednesday_shift, @shifts%>
+  </div>
+  <div class="field">
+    <%= f.label :thursday_shift %><br>
+    <%= f.select :thursday_shift, @shifts%>
+  </div>
+  <div class="field">
+    <%= f.label :friday_shift %><br>
+    <%= f.select :friday_shift, @shifts%>
+  </div>
+  <div class="field">
+    <%= f.label :saturday_shift %><br>
+    <%= f.select :saturday_shift, @shifts%>
+  </div>
+  <div class="field">
+    <%= f.label :sunday_shift %><br>
+    <%= f.select :sunday_shift, @shifts%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

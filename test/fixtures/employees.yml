@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee_number: MyString
+  first_name: MyString
+  surname: MyString
+  security_pin: MyString
+  mobile_number: MyString
+  monday_shift: MyString
+  tuesday_shift: MyString
+  wednesday_shift: MyString
+  thursday_shift: MyString
+  friday_shift: MyString
+  saturday_shift: MyString
+  sunday_shift: MyString
+
+two:
+  employee_number: MyString
+  first_name: MyString
+  surname: MyString
+  security_pin: MyString
+  mobile_number: MyString
+  monday_shift: MyString
+  tuesday_shift: MyString
+  wednesday_shift: MyString
+  thursday_shift: MyString
+  friday_shift: MyString
+  saturday_shift: MyString
+  sunday_shift: MyString

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee number:</strong>
+  <%= @employee.employee_number %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @employee.first_name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @employee.surname %>
+</p>
+
+<p>
+  <strong>Security pin:</strong>
+  <%= @employee.security_pin %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @employee.mobile_number %>
+</p>
+
+<p>
+  <strong>Monday shift:</strong>
+  <%= @employee.monday_shift %>
+</p>
+
+<p>
+  <strong>Tuesday shift:</strong>
+  <%= @employee.tuesday_shift %>
+</p>
+
+<p>
+  <strong>Wednesday shift:</strong>
+  <%= @employee.wednesday_shift %>
+</p>
+
+<p>
+  <strong>Thursday shift:</strong>
+  <%= @employee.thursday_shift %>
+</p>
+
+<p>
+  <strong>Friday shift:</strong>
+  <%= @employee.friday_shift %>
+</p>
+
+<p>
+  <strong>Saturday shift:</strong>
+  <%= @employee.saturday_shift %>
+</p>
+
+<p>
+  <strong>Sunday shift:</strong>
+  <%= @employee.sunday_shift %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
