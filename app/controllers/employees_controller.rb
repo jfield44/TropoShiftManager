@@ -14,13 +14,13 @@ class EmployeesController < ApplicationController
 
   # GET /employees/new
   def new
-    @shifts = ['Early Shift (8am - 5pm)', 'Late Shift (2pm - 10pm)']
+    @shifts = ['Early Shift (From 8am until 5pm)', 'Late Shift (From 2pm until 10pm)']
     @employee = Employee.new
   end
 
   # GET /employees/1/edit
   def edit
-    @shifts = ['Early Shift (8am - 5pm)', 'Late Shift (2pm - 10pm)']
+    @shifts = ['Early Shift (From 8am until 5pm)', 'Late Shift (From 2pm until 10pm)']
   end
 
   # POST /employees
