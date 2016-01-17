@@ -10,6 +10,11 @@ class EmployeesController < ApplicationController
   # GET /employees/1
   # GET /employees/1.json
   def show
+    @employee = Employee.find(params[:id])
+  end
+
+  def shift
+    @employee = Employee.find_by_employee_number(params[:id])
   end
 
   # GET /employees/new
@@ -66,7 +71,7 @@ class EmployeesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_employee
-      @employee = Employee.find_by_employee_number(params[:id])
+      @employee = Employee.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

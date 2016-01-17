@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :employees
+  get '/employee_shift_details/:id', to: 'employees#shift'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
