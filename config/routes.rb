@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :employees
+  resources :absence_blasters
+  resources :absenses
+  resources :employees do
+    member do
+      get :blaster
+    end
+  end
   get '/employee_shift_details/:id', to: 'employees#shift'
+  post '/update_absense_by_access_code/:access_code', to: 'absenses#update_absense_by_access_code'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

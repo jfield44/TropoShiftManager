@@ -1,0 +1,30 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Absence Blaster</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+  </section>
+</nav>
+
+<p id="notice"><%= notice %></p>
+
+
+<center><h4>Create Blaster for an Absence</h4></center>
+
+<div class="row">
+  <div class="large-12 columns">
+    <%= simple_form_for @absense do |f| %>
+      <%= f.association :employee, :label_method => lambda { |employee| "#{employee.first_name} #{employee.surname}" }%>
+      <%= f.input :shift, label: 'Shift', :collection => @shifts%>
+      <%= f.input :reason, label: 'Absence Reason', hint: 'Absence Reason.', :collection => @reasons %>
+      <%= f.input :phone_number, label: 'Blaster Phone Number', placeholder: 'Enter Blaster Phone Number' %>
+      <center><%= f.button :submit %></center>
+    <% end %>
+  </div>
+</div>

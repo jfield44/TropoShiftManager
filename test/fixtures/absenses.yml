@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shift: MyString
+  reason: MyString
+  replacement_employee: MyString
+  employee_id: 
+
+two:
+  shift: MyString
+  reason: MyString
+  replacement_employee: MyString
+  employee_id: 

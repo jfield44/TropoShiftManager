@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shift:</strong>
+  <%= @absense.shift %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @absense.reason %>
+</p>
+
+<p>
+  <strong>Replacement employee:</strong>
+  <%= @absense.replacement_employee %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @absense.employee %>
+</p>
+
+<%= link_to 'Edit', edit_absense_path(@absense) %> |
+<%= link_to 'Back', absenses_path %>

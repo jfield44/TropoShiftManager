@@ -14,7 +14,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<table>
+<table align="center">
   <thead>
     <tr>
       <th>Employee ID</th>
@@ -31,6 +31,7 @@
       <th>Sunday</th>
       <th>View</th>
       <th>Edit</th>
+      <th>Absence</th>
       <th>Delete</th>
     </tr>
   </thead>
@@ -52,6 +53,7 @@
         <td><%= employee.sunday_shift %></td>
         <td><%= link_to 'Show', employee %></td>
         <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Blaster', blaster_employee_path(employee) %></td>
         <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -60,4 +62,4 @@
 
 <br>
 
-<h5><center><%= link_to 'Create New Employee', new_employee_path, {style: "color: blue"} %></center></h5>
+<h5><center><%= link_to 'Create New Employee', new_employee_path, {:class => "button radius", style: "color: white"} %></center></h5>

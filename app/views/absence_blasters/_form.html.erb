@@ -1,0 +1,15 @@
+<%= simple_form_for(@absence_blaster) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :recipient_name %>
+    <%= f.input :recipient_number %>
+    <%= f.input :shift %>
+    <%= f.input :access_code %>
+    <%= f.association :absence %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

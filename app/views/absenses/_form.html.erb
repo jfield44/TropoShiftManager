@@ -1,0 +1,33 @@
+<%= form_for(@absense) do |f| %>
+  <% if @absense.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@absense.errors.count, "error") %> prohibited this absense from being saved:</h2>
+
+      <ul>
+      <% @absense.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shift %><br>
+    <%= f.text_field :shift %>
+  </div>
+  <div class="field">
+    <%= f.label :reason %><br>
+    <%= f.text_field :reason %>
+  </div>
+  <div class="field">
+    <%= f.label :replacement_employee %><br>
+    <%= f.text_field :replacement_employee %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.text_field :employee_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -28,6 +28,14 @@ class EmployeesController < ApplicationController
     @shifts = ['Early Shift', 'Midday Shift', 'Late Shift']
   end
 
+  def blaster
+    @shifts = ['Early Shift', 'Midday Shift', 'Late Shift']
+    @reasons = ['Did Not Turn Up', 'Illness', 'Unknown']
+    @employee = Employee.find(params[:id])
+    @absense = Absense.new
+    puts 'Woooo'
+  end
+
   # POST /employees
   # POST /employees.json
   def create
