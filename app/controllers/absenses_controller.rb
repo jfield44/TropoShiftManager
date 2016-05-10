@@ -20,11 +20,6 @@ class AbsensesController < ApplicationController
 
   def update_absense_by_access_code
     @blaster = AbsenceBlaster.find_by_access_code(params[:access_code])
-    puts 'PARAMMSSS: ' + params.to_yaml
-    #puts 'Blasterrrrrr      ' + @blaster.
-    puts @blaster.to_yaml
-    puts 'Class is: ' + @blaster.class.to_s
-    puts @blaster.absense_id
     @absense = Absense.find(@blaster.absense_id)
     Absense.update(@blaster.absense_id, :replacement_employee => params[:replacement_employee])
     @blaster.delete
